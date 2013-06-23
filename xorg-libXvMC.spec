@@ -1,11 +1,11 @@
 Summary:	XvMC library
 Name:		xorg-libXvMC
-Version:	1.0.7
-Release:	2
+Version:	1.0.8
+Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXvMC-%{version}.tar.bz2
-# Source0-md5:	3340c99ff556ea2457b4be47f5cb96fa
+# Source0-md5:	2e4014e9d55c430e307999a6b3dd256d
 Source1:	XvMCConfig
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf
