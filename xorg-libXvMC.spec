@@ -1,12 +1,13 @@
 Summary:	XvMC library
 Name:		xorg-libXvMC
 Version:	1.0.8
-Release:	1
+Release:	2
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXvMC-%{version}.tar.bz2
 # Source0-md5:	2e4014e9d55c430e307999a6b3dd256d
 Source1:	XvMCConfig
+Patch0:		%{name}-libdl.patch
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -32,6 +33,7 @@ use libXvMC.
 
 %prep
 %setup -qn libXvMC-%{version}
+%patch0 -p1
 
 %build
 %{__libtoolize}
@@ -72,8 +74,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libXvMC.so
 %attr(755,root,root) %{_libdir}/libXvMCW.so
-%{_libdir}/libXvMC.la
-%{_libdir}/libXvMCW.la
 %{_includedir}/X11/extensions/*.h
 %{_pkgconfigdir}/xvmc.pc
 

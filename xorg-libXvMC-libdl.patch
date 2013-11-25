@@ -1,0 +1,12 @@
+diff -aurN libXvMC-1.0.8.orig/configure.ac libXvMC-1.0.8/configure.ac
+--- libXvMC-1.0.8.orig/configure.ac	2013-11-21 10:39:18.271361120 +0100
++++ libXvMC-1.0.8/configure.ac	2013-11-21 10:47:21.052909889 +0100
+@@ -39,6 +39,8 @@
+ XORG_DEFAULT_OPTIONS
+ XORG_CHECK_MALLOC_ZERO
+ 
++AC_SEARCH_LIBS([dlopen], [dl])
++
+ # Obtain compiler/linker options for depedencies
+ PKG_CHECK_MODULES(XVMC, x11 xext xv xextproto videoproto)
+ 
