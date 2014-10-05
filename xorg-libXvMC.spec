@@ -1,7 +1,7 @@
 Summary:	XvMC library
 Name:		xorg-libXvMC
 Version:	1.0.8
-Release:	2
+Release:	3
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXvMC-%{version}.tar.bz2
@@ -52,6 +52,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	pkgconfigdir=%{_pkgconfigdir}
+
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
 
 install -D %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}/X11/XvMCConfig
 
